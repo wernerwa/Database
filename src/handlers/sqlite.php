@@ -108,7 +108,7 @@ class ezcDbHandlerSqlite extends ezcDbHandler
      * @apichange Never implemented properly, no good use (See #10937)
      * @ignore
      * @param string $feature
-     * @return array(string)
+     * @return string[]
      */
     static public function hasFeature( $feature )
     {

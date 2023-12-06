@@ -117,7 +117,7 @@ class ezcQueryExpressionPgsql extends ezcQueryExpression
      * must contain an expression or an array with expressions.
      *
      * @throws ezcQueryVariableParameterException if no parameters are provided.
-     * @param string|array(string) $... strings that will be concatinated.
+     * @param string|string[] $... strings that will be concatinated.
      * @return string
      */
     public function concat()

@@ -113,7 +113,7 @@ abstract class ezcQuery
      * names instead of column and table names.
      *
      * @param PDO $db
-     * @param array(string=>string) $aliases
+     * @param array<string, string> $aliases
      */
     public function __construct( PDO $db, array $aliases = array() )
     {
@@ -204,7 +204,7 @@ abstract class ezcQuery
      * SELECT orders.Recipient FROM orders;
      * </code>
      *
-     * @param array(string=>string) $aliases
+     * @param array<string, string> $aliases
      * @return void
      */
     public function setAliases( array $aliases )
@@ -281,8 +281,8 @@ abstract class ezcQuery
      *
      * This method is similar to getIdentifier except that it works on an array.
      *
-     * @param array(string) $aliasList
-     * @return array(string)
+     * @param string[] $aliasList
+     * @return string[]
      */
     protected function getIdentifiers( array $aliasList )
     {

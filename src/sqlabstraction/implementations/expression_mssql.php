@@ -143,7 +143,7 @@ class ezcQueryExpressionMssql extends ezcQueryExpression
      * concat() accepts an arbitrary number of parameters. Each parameter
      * must contain an expression or an array with expressions.
      *
-     * @param string|array(string) $... strings that will be concatinated.
+     * @param string|string[] $... strings that will be concatinated.
      */
     public function concat()
     {

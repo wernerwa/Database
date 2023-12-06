@@ -100,7 +100,7 @@ class ezcQuerySelectSqlite extends ezcQuerySelect
      * </code>
      *
      * @throws ezcQueryVariableParameterException if called with no parameters.
-     * @param string|array(string) $... Either a string with a table name or an array of table names.
+     * @param string|string[] $... Either a string with a table name or an array of table names.
      * @return a pointer to $this
      */
     public function from()

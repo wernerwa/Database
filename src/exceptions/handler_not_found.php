@@ -39,7 +39,7 @@ class ezcDbHandlerNotFoundException extends ezcDbException
      * $known is a list of the known database handlers.
      *
      * @param string $name
-     * @param array(string) $known
+     * @param string[] $known
      */
     public function __construct( $name, array $known = array() )
     {

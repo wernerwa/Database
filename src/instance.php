@@ -126,7 +126,7 @@ class ezcDbInstance
     /**
      * Returns the identifiers of the registered database instances.
      *
-     * @return array(string)
+     * @return string[]
      */
     public static function getIdentifiers()
     {

@@ -142,7 +142,7 @@ class ezcDbHandlerMysql extends ezcDbHandler
      *
      * @apichange Never implemented properly, no good use (See #10937)
      * @ignore
-     * @param array(string) $feature
+     * @param string[] $feature
      * @return bool
      */
     static public function hasFeature( $feature )

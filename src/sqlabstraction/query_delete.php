@@ -74,7 +74,7 @@ class ezcQueryDelete extends ezcQuery
      *
      * The paramters are passed directly to ezcQuery.
      * @param PDO $db
-     * @param array(string=>string) $aliases
+     * @param array<string, string> $aliases
      */
     public function __construct( PDO $db, array $aliases = array() )
     {
@@ -111,7 +111,7 @@ class ezcQueryDelete extends ezcQuery
      * </code>
      *
      * @throws ezcQueryVaraibleParameterException if called with no parameters.
-     * @param string|array(string) $... Either a string with a logical expression name
+     * @param string|string[] $... Either a string with a logical expression name
      * or an array with logical expressions.
      * @return ezcQueryDelete
      */

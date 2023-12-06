@@ -57,7 +57,7 @@
  * a query "SET NAMES" for example. See the tutorial for some hints on this.
  *
  * @see create()
- *
+ * @template T
  * @package Database
  * @version //autogentag//
  */
@@ -69,7 +69,7 @@ class ezcDbFactory
      * The list is an array with the form 'dbname' => 'HandlerClassName'
      * This list may be extended using {@link addImplementation()}.
      *
-     * @var array(string=>string)
+     * @var class-string[]
      */
     static private $implementations = array( 'mysql'  => 'ezcDbHandlerMysql',
                                              'pgsql'  => 'ezcDbHandlerPgsql',
@@ -96,7 +96,7 @@ class ezcDbFactory
      * </code>
      *
      * @param string $implementationName
-     * @param string $className
+     * @param class-string<T> $className
      * @return void
      */
     static public function addImplementation( $implementationName, $className )
@@ -112,7 +112,7 @@ class ezcDbFactory
      * ezcDbFactory::getImplementations();
      * </code>
      *
-     * @return array(string)
+     * @return string[]
      */
     static public function getImplementations()
     {
@@ -145,7 +145,7 @@ class ezcDbFactory
      *                 (driver, host, port, user, pass, etc).
      *                 May be specified either as array (key => val ....) or as DSN string.
      *                 Format of the DSN is the same as accepted by PEAR::DB::parseDSN().
-     * @return ezcDbHandler
+     * @return T|ezcDbHandler
      */
     static public function create( $dbParams )
     {

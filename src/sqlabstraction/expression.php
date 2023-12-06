@@ -81,7 +81,7 @@ class ezcQueryExpression
      * Constructs an empty ezcQueryExpression
      *
      * @param PDO $db
-     * @param array(string=>string) $aliases
+     * @param array<string, string> $aliases
      */
     public function __construct( PDO $db, array $aliases = array() )
     {
@@ -99,7 +99,7 @@ class ezcQueryExpression
      * friendly names. E.g PersistentObject uses it to allow using property and class
      * names instead of column and table names.
      *
-     * @param array(string=>string) $aliases
+     * @param array<string, string> $aliases
      * @return void
      */
     public function setAliases( array $aliases )
@@ -172,8 +172,8 @@ class ezcQueryExpression
      *
      * This method is similar to getIdentifier except that it works on an array.
      *
-     * @param array(string) $aliasList
-     * @return array(string)
+     * @param string[] $aliasList
+     * @return string[]
      */
     protected function getIdentifiers( array $aliasList )
     {
@@ -323,7 +323,7 @@ class ezcQueryExpression
      *
      * @throws ezcDbAbstractionException if called with no parameters.
      * @param string $type the type of operation, can be '+', '-', '*' or '/'.
-     * @param string|array(string) $...
+     * @param string|string[] $...
      * @return string an expression
      */
     private function basicMath( $type )
@@ -360,7 +360,7 @@ class ezcQueryExpression
      * </code>
      *
      * @throws ezcDbAbstractionException if called with no parameters.
-     * @param string|array(string) $...
+     * @param string|string[] $...
      * @return string an expression
      */
     public function add()
@@ -384,7 +384,7 @@ class ezcQueryExpression
      * </code>
      *
      * @throws ezcDbAbstractionException if called with no parameters.
-     * @param string|array(string) $...
+     * @param string|string[] $...
      * @return string an expression
      */
     public function sub()
@@ -408,7 +408,7 @@ class ezcQueryExpression
      * </code>
      *
      * @throws ezcDbAbstractionException if called with no parameters.
-     * @param string|array(string) $...
+     * @param string|string[] $...
      * @return string an expression
      */
     public function mul()
@@ -432,7 +432,7 @@ class ezcQueryExpression
      * </code>
      *
      * @throws ezcDbAbstractionException if called with no parameters.
-     * @param string|array(string) $...
+     * @param string|string[] $...
      * @return string an expression
      */
     public function div()
@@ -595,7 +595,7 @@ class ezcQueryExpression
      * @throws ezcQueryInvalidParameterException if the 2nd parameter is an
      *         empty array.
      * @param string $column the value that should be matched against
-     * @param string|array(string) $... values that will be matched against $column
+     * @param string|string[] $... values that will be matched against $column
      * @return string logical expression
      */
     public function in( $column )
@@ -877,7 +877,7 @@ class ezcQueryExpression
      * concat() accepts an arbitrary number of parameters. Each parameter
      * must contain an expression or an array with expressions.
      *
-     * @param string|array(string) $... strings that will be concatinated.
+     * @param string|string[] $... strings that will be concatinated.
      */
     public function concat()
     {

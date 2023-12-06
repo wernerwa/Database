@@ -86,7 +86,7 @@ class ezcQueryUpdate extends ezcQuery
      *
      * The parameters are passed directly to ezcQuery.
      * @param PDO $db
-     * @param array(string=>string) $aliases
+     * @param array<string, string> $aliases
      */
     public function __construct( PDO $db, array $aliases = array() )
     {
@@ -140,7 +140,7 @@ class ezcQueryUpdate extends ezcQuery
      * </code>
      *
      * @throws ezcQueryVariableParameterException if called with no parameters.
-     * @param string|array(string) $... Either a string with a logical expression name
+     * @param string|string[] $... Either a string with a logical expression name
      * or an array with logical expressions.
      * @return ezcQueryUpdate
      */

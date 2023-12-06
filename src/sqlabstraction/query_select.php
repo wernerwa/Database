@@ -137,7 +137,7 @@ class ezcQuerySelect extends ezcQuery
      * For an introduction to aliases see {@link ezcQuery::__construct()}.
      *
      * @param PDO $db a pointer to the database object.
-     * @param array(string=>string) $aliases
+     * @param array<string, string> $aliases
      */
     public function __construct( PDO $db, array $aliases = array() )
     {
@@ -189,7 +189,7 @@ class ezcQuerySelect extends ezcQuery
      * Each of above code produce SQL clause 'SELECT column1, column2' for the query.
      *
      * @throws ezcQueryVariableParameterException if called with no parameters..
-     * @param string|array(string) $... Either a string with a column name or an array of column names.
+     * @param string|string[] $... Either a string with a column name or an array of column names.
      * @return ezcQuery returns a pointer to $this.
      */
     public function select()
@@ -277,7 +277,7 @@ class ezcQuerySelect extends ezcQuery
      *
      * @throws ezcQueryVariableParameterException if called with no parameters..
      * @throws ezcQueryInvalidException if called after select()
-     * @param string|array(string) $... Either a string with a column name or an array of column names.
+     * @param string|string[] $... Either a string with a column name or an array of column names.
      * @return ezcQuery returns a pointer to $this.
      */
     public function selectDistinct()
@@ -319,7 +319,7 @@ class ezcQuerySelect extends ezcQuery
      * </code>
      *
      * @throws ezcQueryVariableParameterException if called with no parameters.
-     * @param string|array(string) $... Either a string with a table name or an array of table names.
+     * @param string|string[] $... Either a string with a table name or an array of table names.
      * @return ezcQuery a pointer to $this
      */
     public function from()
@@ -646,7 +646,7 @@ class ezcQuerySelect extends ezcQuery
      * </code>
      *
      * @throws ezcQueryVariableParameterException if called with no parameters.
-     * @param string|array(string) $... Either a string with a logical expression name
+     * @param string|string[] $... Either a string with a logical expression name
      * or an array with logical expressions.
      * @return ezcQuerySelect
      */
@@ -809,7 +809,7 @@ class ezcQuerySelect extends ezcQuery
      *         if invoked without preceding call to groupBy().
      * @throws ezcQueryVariableParameterException
      *         if called with no parameters.
-     * @param string|array(string) $... Either a string with a logical expression name
+     * @param string|string[] $... Either a string with a logical expression name
      *                             or an array with logical expressions.
      * @return ezcQuery a pointer to $this
      */

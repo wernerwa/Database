@@ -51,7 +51,7 @@ class ezcQueryExpressionOracle extends ezcQueryExpression
      * must contain an expression or an array with expressions.
      *
      * @throws ezcQueryVariableException if no parameters are provided
-     * @param string|array(string) $... strings that will be concatinated.
+     * @param string|string[] $... strings that will be concatinated.
      * @return string
      */
     public function concat()
@@ -270,15 +270,15 @@ class ezcQueryExpressionOracle extends ezcQueryExpression
      *                  ->where( $q->expr->in( 'id', 1, 2, 3 ) );
      * </code>
      *
-     * Oracle limits the number of values in a single IN() to 1000. This 
-     * implementation creates a list of combined IN() expressions to bypass 
+     * Oracle limits the number of values in a single IN() to 1000. This
+     * implementation creates a list of combined IN() expressions to bypass
      * this limitation.
      *
      * @throws ezcQueryVariableParameterException if called with less than two
      *         parameters.
      * @throws ezcQueryInvalidParameterException if the 2nd parameter is an
      *         empty array.
-     * @param string|array(string) values that will be matched against $column
+     * @param string|string[] values that will be matched against $column
      * @return string logical expression
      */
     public function in( $column )
