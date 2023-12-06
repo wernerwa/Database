@@ -116,12 +116,7 @@ class ezcDbFactory
      */
     static public function getImplementations()
     {
-        $list = array();
-        foreach ( self::$implementations as $name => $className )
-        {
-            $list[] = $name;
-        }
-        return $list;
+        return array_keys(self::$implementations);
     }
 
     /**
