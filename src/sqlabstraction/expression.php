@@ -641,6 +641,9 @@ class ezcQueryExpression
                     case is_float( $value ):
                         $values[$key] = (string) $value;
                         break;
+                    case is_null($value):
+                        $values[$key] = 'NULL';
+                        break;
                     default:
                         $values[$key] = $this->db->quote( $value );
                 }
